@@ -1,0 +1,88 @@
+/* Estilos propios de la app del servicio. Se apoyan en las variables de /css/estilos.css. */
+
+.srv-hero {
+  position: relative; overflow: hidden;
+  padding-block: clamp(2rem, 1.5rem + 4vw, 5rem);
+  background:
+    radial-gradient(circle at 78% 30%, rgb(245 196 0 / .32), transparent 50%),
+    linear-gradient(180deg, var(--papel), var(--superficie-2));
+}
+.srv-hero__grilla { display: grid; gap: 2rem; align-items: center; }
+.srv-hero h1 { max-width: 16ch; }
+.srv-hero__bajada { font-size: var(--paso-1); color: var(--texto-suave); max-width: 58ch; }
+.srv-lampara { color: var(--tinta); max-width: 340px; justify-self: center; width: 100%; }
+.srv-lampara svg { width: 100%; height: auto; overflow: visible; }
+
+.srv-dos-columnas { display: grid; gap: 2rem; }
+.srv-beneficios { display: grid; gap: 1rem; margin: 0; grid-template-columns: 1fr; }
+.srv-beneficios div { background: var(--superficie); border: 1px solid var(--linea); border-radius: var(--radio); padding: 1rem 1.2rem; }
+.srv-beneficios dt { font-weight: 800; color: var(--enlace); }
+.srv-beneficios dd { margin: .25rem 0 0; }
+
+.srv-etapas { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; counter-reset: none; }
+.srv-etapas li { position: relative; background: var(--superficie); border: 1px solid var(--linea); border-radius: var(--radio); padding: 1.2rem 1.2rem 1.2rem 4.2rem; box-shadow: var(--sombra); }
+.srv-etapas h3 { margin-bottom: .2rem; }
+.srv-etapas p:last-child { margin-bottom: 0; }
+.srv-etapas__numero { position: absolute; left: 1.1rem; top: 1.1rem; width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center; background: var(--sol); color: var(--sobre-sol); font-weight: 800; }
+.srv-etapas__plazo { font-weight: 700; color: var(--enlace); font-size: var(--paso--1); }
+
+.srv-planes { display: grid; gap: 1.2rem; margin-block: 1.5rem 2rem; }
+.srv-plan { position: relative; background: var(--superficie); border: 1px solid var(--linea); border-radius: calc(var(--radio) * 1.2); padding: 1.6rem; box-shadow: var(--sombra); display: flex; flex-direction: column; }
+.srv-plan--destacado { border: 2px solid var(--oro); box-shadow: var(--sombra-alta); background: linear-gradient(170deg, color-mix(in srgb, var(--sol) 16%, var(--superficie)), var(--superficie) 55%); }
+.srv-plan__sello { position: absolute; top: -0.85rem; left: 1.4rem; margin: 0; background: var(--tinta); color: var(--papel); border-radius: 999px; padding: .2rem .8rem; font-size: var(--paso--1); font-weight: 800; }
+.srv-plan__bajada { color: var(--texto-suave); }
+.srv-plan__precio { font-size: var(--paso-3); font-weight: 800; margin: .2rem 0 1rem; letter-spacing: -.02em; }
+.srv-plan__precio span { font-size: var(--paso--1); font-weight: 600; color: var(--texto-suave); letter-spacing: 0; }
+.srv-plan__datos { margin: 0 0 1rem; display: grid; gap: .5rem; }
+.srv-plan__datos div { display: grid; grid-template-columns: 1fr; gap: .1rem; border-bottom: 1px dashed var(--linea); padding-bottom: .45rem; }
+.srv-plan__datos dt { font-weight: 700; font-size: var(--paso--1); }
+.srv-plan__datos dd { margin: 0; font-size: var(--paso--1); }
+.srv-plan h4 { margin: .4rem 0 .4rem; font-size: var(--paso-0); }
+.srv-plan ul { margin-top: 0; margin-bottom: 1.4rem; }
+.srv-plan .boton { margin-top: auto; }
+.srv-condiciones li { margin-bottom: .45rem; }
+
+.srv-simulador { display: grid; gap: 2rem; align-items: center; }
+.srv-simulador__etiqueta { display: block; font-weight: 700; margin: 1rem 0 .5rem; }
+.srv-simulador__etiqueta output { font-variant-numeric: tabular-nums; color: var(--enlace); }
+.srv-rango { width: 100%; accent-color: var(--oro); height: 2rem; background: transparent; }
+.srv-rango::-webkit-slider-runnable-track { height: .6rem; border-radius: 999px; background: linear-gradient(90deg, #ffa94d, #ffe1b8, #f7f4ff, #c9dcff); }
+.srv-rango::-moz-range-track { height: .6rem; border-radius: 999px; background: linear-gradient(90deg, #ffa94d, #ffe1b8, #f7f4ff, #c9dcff); }
+.srv-rango__extremos { display: flex; justify-content: space-between; font-size: var(--paso--1); color: var(--texto-suave); }
+.srv-atmosfera { margin-top: 1rem; background: var(--superficie); border-left: 4px solid var(--oro); border-radius: 0 var(--radio-chico) var(--radio-chico) 0; padding: 1rem 1.2rem; }
+.srv-atmosfera h3 { margin-bottom: .3rem; }
+.srv-atmosfera p { margin: 0; }
+.srv-escena { margin: 0; border-radius: var(--radio); overflow: hidden; box-shadow: var(--sombra-alta); background: #000; }
+.srv-escena svg { display: block; width: 100%; height: auto; transition: filter .3s; }
+
+.srv-kelvin { font-weight: 700; color: var(--enlace); font-size: var(--paso--1); }
+
+.srv-faq { border-top: 1px solid var(--linea); }
+.srv-faq__item { border-bottom: 1px solid var(--linea); }
+.srv-faq__item h3 { margin: 0; font-size: var(--paso-0); }
+.srv-faq__item button {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  background: none; border: 0; padding: 1rem .2rem; font: inherit; font-weight: 700; color: var(--tinta); text-align: left; cursor: pointer;
+}
+.srv-faq__item button:hover { color: var(--enlace); }
+.srv-faq__icono { font-size: 1.4rem; line-height: 1; color: var(--enlace); }
+.srv-faq__item [role="region"] p { padding: 0 .2rem 1rem; margin: 0; }
+
+.srv-contacto { margin-top: 1rem; }
+.srv-contacto p { margin: 0 0 .35rem; }
+.destacado-servicio .srv-contacto a { color: #f5c84a; }
+
+@media (min-width: 720px) {
+  .srv-beneficios { grid-template-columns: 1fr 1fr; }
+  .srv-etapas { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 960px) {
+  .srv-hero__grilla { grid-template-columns: 1.3fr .7fr; }
+  .srv-dos-columnas { grid-template-columns: 1fr 1fr; align-items: start; }
+  .srv-planes { grid-template-columns: repeat(3, 1fr); }
+  .srv-simulador { grid-template-columns: .9fr 1.1fr; }
+  .srv-etapas { grid-template-columns: repeat(3, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .srv-escena svg { transition: none; }
+}

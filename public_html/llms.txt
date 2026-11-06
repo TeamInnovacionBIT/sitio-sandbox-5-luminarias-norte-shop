@@ -1,0 +1,18 @@
+# Luminarias Norte
+
+> Luminarias Norte es una empresa argentina de iluminación con showroom en Junín de los Andes, Neuquén, que vende en todo el país lámparas y luminarias, equipos de energía solar y pantallas LED, con precios en pesos e IVA incluido. Su servicio principal es el diseño de iluminación para interiores, un proyecto a medida para hogares, locales y oficinas.
+
+## Información institucional
+
+- [Inicio](https://luminariasnorte.shop/index.md): presentación de la empresa, líneas de negocio, productos destacados con precio, resumen de envíos, reseñas de clientes y showroom.
+- [Quiénes somos](https://luminariasnorte.shop/quienes-somos.md): historia de la empresa desde 2009, showroom, líneas de negocio y forma de trabajo.
+- [Contacto](https://luminariasnorte.shop/contacto.md): dirección, teléfono, correo, horarios de atención, plazo de respuesta y preguntas frecuentes sobre compras, pagos, retiros, devoluciones y garantía.
+
+## Catálogo
+
+- [Catálogo completo](https://luminariasnorte.shop/catalogo.md): lámparas y luminarias, diseño de iluminación para interiores, energía solar y pantallas LED con código, atributos técnicos, precio en pesos con IVA, garantía y disponibilidad.
+
+## Compras y envíos
+
+- [Envíos a todo el país](https://luminariasnorte.shop/envios.md): zonas, costos por rango de peso, plazos en días hábiles, retiro en el showroom y proceso de compra.
+- [Bases y condiciones](https://luminariasnorte.shop/bases-y-condiciones.md): cláusulas de compra con precios, pedidos, pagos, entregas, garantías y arrepentimiento en 10 días corridos.

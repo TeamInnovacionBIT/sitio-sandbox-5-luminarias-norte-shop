@@ -8,9 +8,13 @@
 - [Quiénes somos](https://luminariasnorte.shop/quienes-somos.md): historia de la empresa desde 2009, showroom, líneas de negocio y forma de trabajo.
 - [Contacto](https://luminariasnorte.shop/contacto.md): dirección, teléfono, correo, horarios de atención, plazo de respuesta y preguntas frecuentes sobre compras, pagos, retiros, devoluciones y garantía.
 
+## Servicio principal
+
+- [Diseño de iluminación para interiores](https://luminariasnorte.shop/diseno-de-iluminacion.md): servicio LN-SRV-001 con sus tres planes (Ambiente, Hogar e Integral), precios en pesos con IVA incluido, alcance, entregables, plazos, condiciones, etapas de trabajo y preguntas frecuentes.
+
 ## Catálogo
 
-- [Catálogo completo](https://luminariasnorte.shop/catalogo.md): lámparas y luminarias, diseño de iluminación para interiores, energía solar y pantallas LED con código, atributos técnicos, precio en pesos con IVA, garantía y disponibilidad.
+- [Catálogo completo](https://luminariasnorte.shop/catalogo.md): lámparas y luminarias, diseño de iluminación para interiores, energía solar y pantallas LED con código, atributos técnicos, precio en pesos con IVA, garantía y disponibilidad. Incluye los descuentos de Black Friday vigentes hasta el 30 de noviembre de 2026, con precio anterior y precio con descuento.
 
 ## Compras y envíos
 

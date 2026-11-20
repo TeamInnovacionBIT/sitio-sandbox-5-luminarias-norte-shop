@@ -1,5 +1,6 @@
 // Datos del servicio estrella. Copiados de interno/catalogo-maestro.md, sección 4
-// ("SOLO APP REACT"). No se replican en ninguna página estática.
+// ("SOLO APP REACT"). Desde 2026-11-20 tienen copia textual en public_html/diseno-de-iluminacion.md
+// (LN-SERVICIO-M): si cambian acá, hay que actualizar ese archivo.
 
 export const contacto = {
   direccion: 'Ruta 40 esquina Ruta 52, Junín de los Andes, provincia de Neuquén, Argentina',

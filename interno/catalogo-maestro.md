@@ -3,7 +3,7 @@
 Fuente única de verdad del sitio. Todo precio, código, atributo, disponibilidad, URL de imagen y valor corporativo que aparezca en HTML, Markdown, JSON-LD, la home, los atributos `data-*` del carrito y la app React se copia de este archivo sin variaciones.
 
 - Moneda: pesos argentinos (ARS), IVA incluido. Formato visible: `$ 18.900` (punto de miles, sin decimales). En JSON-LD y `data-precio`: entero sin separadores (`18900`).
-- Última revisión: 2026-11-06.
+- Última revisión: 2026-11-20 (promoción Black Friday, sección 3.5).
 
 ## 1. Datos de contacto (idénticos en todo el sitio)
 
@@ -108,9 +108,46 @@ Destacado en la home: LN-SOL-305 (junto a la imagen promocion-de-panel).
 
 Destacado en la home: LN-LED-458.
 
-## 4. SERVICIO ESTRELLA — SOLO APP REACT; no copiar a ninguna otra página
+### 3.5 Promoción Black Friday (vigente del 2026-11-20 al 2026-11-30 inclusive)
 
-> Nada de esta sección puede aparecer en HTML estático, Markdown, JSON-LD, llms.txt, sitemap.xml ni en ningún archivo publicado fuera de `public_html/diseno-de-iluminacion/` (compilado). La fuente para la app es `servicio-react/src/datos.js`, copiada de aquí.
+Las columnas "Precio" y "data-precio" de las tablas 3.1 a 3.4 pasan a ser el **precio de lista** (se muestra tachado). Mientras dure la promoción, el precio que se cobra, el `data-precio` del carrito y el `price` del JSON-LD son los de la columna "Precio Black Friday". Los porcentajes se sortearon al azar entre 10 % y 40 % por producto; el precio promocional se redondeó a la decena.
+
+Formato visible en HTML: `Antes <del>$ X</del> <strong>$ Y</strong> N % de descuento`. En Markdown: `Antes ~~$ X~~ **$ Y** N % de descuento`. JSON-LD: `price` = promoción, `priceValidUntil` = 2026-11-30 y `priceSpecification` con `priceType` StrikethroughPrice = precio de lista. Aviso visible al comienzo del catálogo (HTML y MD) y mención en la introducción de destacados de la home.
+
+| Código | Precio de lista | data-precio de lista | Descuento | Precio Black Friday | data-precio y JSON-LD price |
+|---|---|---|---|---|---|
+| LN-LAM-104 | $ 2.870 | 2870 | 17 % | $ 2.380 | 2380 |
+| LN-LAM-117 | $ 6.430 | 6430 | 13 % | $ 5.590 | 5590 |
+| LN-LAM-126 | $ 3.190 | 3190 | 33 % | $ 2.140 | 2140 |
+| LN-LAM-133 | $ 5.760 | 5760 | 23 % | $ 4.440 | 4440 |
+| LN-LAM-148 | $ 47.380 | 47380 | 11 % | $ 42.170 | 42170 |
+| LN-LAM-152 | $ 14.920 | 14920 | 22 % | $ 11.640 | 11640 |
+| LN-LAM-169 | $ 32.640 | 32640 | 14 % | $ 28.070 | 28070 |
+| LN-INT-211 | $ 58.240 | 58240 | 37 % | $ 36.690 | 36690 |
+| LN-INT-224 | $ 96.870 | 96870 | 12 % | $ 85.250 | 85250 |
+| LN-INT-237 | $ 44.590 | 44590 | 35 % | $ 28.980 | 28980 |
+| LN-INT-245 | $ 83.150 | 83150 | 25 % | $ 62.360 | 62360 |
+| LN-INT-252 | $ 27.460 | 27460 | 18 % | $ 22.520 | 22520 |
+| LN-INT-268 | $ 61.390 | 61390 | 40 % | $ 36.830 | 36830 |
+| LN-SOL-305 | $ 98.700 | 98700 | 20 % | $ 78.960 | 78960 |
+| LN-SOL-318 | $ 286.450 | 286450 | 34 % | $ 189.060 | 189060 |
+| LN-SOL-327 | $ 214.380 | 214380 | 36 % | $ 137.200 | 137200 |
+| LN-SOL-334 | $ 742.900 | 742900 | 30 % | $ 520.030 | 520030 |
+| LN-SOL-341 | $ 118.640 | 118640 | 15 % | $ 100.840 | 100840 |
+| LN-SOL-356 | $ 1.318.600 | 1318600 | 21 % | $ 1.041.690 | 1041690 |
+| LN-SOL-372 | $ 74.820 | 74820 | 28 % | $ 53.870 | 53870 |
+| LN-LED-436 | $ 1.487.300 | 1487300 | 31 % | $ 1.026.240 | 1026240 |
+| LN-LED-410 | $ 872.400 | 872400 | 19 % | $ 706.640 | 706640 |
+| LN-LED-423 | $ 658.900 | 658900 | 38 % | $ 408.520 | 408520 |
+| LN-LED-447 | $ 2.193.600 | 2193600 | 27 % | $ 1.601.330 | 1601330 |
+| LN-LED-458 | $ 1.645.800 | 1645800 | 32 % | $ 1.119.140 | 1119140 |
+| LN-LED-463 | $ 1.192.500 | 1192500 | 17 % | $ 989.780 | 989780 |
+
+Al terminar la promoción: volver a mostrar solo el precio de lista en catálogo y home (HTML, MD, `data-precio`, JSON-LD), quitar el aviso y actualizar CONTROL.md, llms.txt y sitemap.xml.
+
+## 4. SERVICIO ESTRELLA — datos de la app React y de su par Markdown
+
+> Desde el 2026-11-20 esta sección se publica en dos lugares: la app React (`servicio-react/src/datos.js`, compilada en `public_html/diseno-de-iluminacion/`) y su versión Markdown `public_html/diseno-de-iluminacion.md` (LN-SERVICIO-M). Sigue sin aparecer en el HTML estático del servicio, en las demás páginas, en el JSON-LD ni en el catálogo. El servicio no tiene descuento de Black Friday.
 
 Nombre del servicio: Diseño de iluminación para interiores (código LN-SRV-001).
 

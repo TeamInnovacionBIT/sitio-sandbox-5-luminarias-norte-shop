@@ -8,7 +8,7 @@ El sitio se publica en [https://luminariasnorte.shop](https://luminariasnorte.sh
 
 - **Sitio estático escrito a mano.** HTML5 semántico, un único `css/estilos.css` y un único `js/sitio.js`, sin frameworks ni build. Todo el contenido está en el HTML de la primera respuesta del servidor.
 - **Páginas duplicadas HTML + Markdown.** Cada página de contenido existe como HTML (para personas) y como `.md` (para máquinas) con el mismo texto. El `.md` se descubre por `<link rel="alternate" type="text/markdown">`, por un enlace visible al pie del contenido y por [`llms.txt`](public_html/llms.txt).
-- **Página del servicio en React.** `/diseno-de-iluminacion/` es una app de Vite + React que se renderiza solo en el navegador. Su HTML servido contiene únicamente el encabezado, el pie y un contenedor vacío.
+- **Página del servicio en React.** `/diseno-de-iluminacion/` es una app de Vite + React que se renderiza solo en el navegador. Su HTML servido contiene únicamente el encabezado, el pie y un contenedor vacío, más el enlace a su versión Markdown (`diseno-de-iluminacion.md`).
 - **Carrito de interfaz.** Lo crea `sitio.js` y guarda en `localStorage` solo códigos y cantidades. No tiene backend y no hace peticiones de red.
 - **Descubrimiento y datos estructurados.** `robots.txt` permisivo, `sitemap.xml`, `llms.txt` y JSON-LD escrito a mano (`Store`, `WebPage`, `BreadcrumbList`, `ItemList` de `Product`, `Service`, `ContactPage`).
 - **Accesibilidad y diseño.** Contraste AA, foco visible y navegación por teclado. Modo oscuro, `prefers-reduced-motion` y diseño responsive mobile-first. Paleta derivada del logo y sin fuentes ni scripts de terceros.
@@ -78,11 +78,12 @@ Subí a Hostinger **solo el contenido de `public_html/`**; `servicio-react/` e `
    - la fila en `CONTROL.md`.
 4. **Nada oculto.** No uses `display:none`, `visibility:hidden` ni trucos de posicionamiento con contenido informativo.
 5. **Sin terceros.** No agregues scripts, fuentes ni CDN externos; las únicas excepciones son las imágenes de productos.
-6. **Datos del servicio solo en la app.** Precios y planes del servicio de diseño viven únicamente en la app React; no los copies a páginas estáticas, `.md`, JSON-LD, `llms.txt` ni `sitemap.xml`.
+6. **Datos del servicio en la app y en su `.md`.** Precios y planes del servicio de diseño viven en la app React (`servicio-react/src/datos.js`) y en `public_html/diseno-de-iluminacion.md`: si cambian, actualizá los dos. No los copies a otras páginas estáticas ni al JSON-LD.
+7. **Promociones.** Los precios de lista y los de la promoción vigente están en el maestro (sección 3.5); el `data-precio` y el `price` del JSON-LD llevan el precio promocional.
 
 ## Versionado
 
-Semántico (`mayor.menor.parche`), con un tag de Git por versión. El registro y los criterios están en [`interno/DOCUMENTACION.md`](interno/DOCUMENTACION.md). Versión actual: **1.0.0**.
+Semántico (`mayor.menor.parche`), con un tag de Git por versión. El registro y los criterios están en [`interno/DOCUMENTACION.md`](interno/DOCUMENTACION.md). Versión actual: **1.1.0**.
 
 ## Créditos
 

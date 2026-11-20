@@ -43,7 +43,7 @@ Gabinetes LED de interior y de exterior para comercios, eventos y cartelería.
 
 ## Productos destacados
 
-Una selección de cada línea, con precios en pesos e IVA incluido.
+Una selección de cada línea, con precios en pesos e IVA incluido y descuentos de Black Friday hasta el 30 de noviembre de 2026.
 
 ### Lámpara LED bulbo A60 regulable 11 W
 
@@ -51,7 +51,7 @@ Código: LN-LAM-117
 
 1.055 lm, 2700 K, CRI 90 y casquillo E27. Regulable.
 
-$ 6.430
+Antes ~~$ 6.430~~ **$ 5.590** 13 % de descuento
 
 En stock
 
@@ -69,7 +69,7 @@ Código: LN-SOL-305
 
 Eficiencia del 20,1 %, 1.010 x 510 x 30 mm, para sistemas de 12 V.
 
-$ 98.700
+Antes ~~$ 98.700~~ **$ 78.960** 20 % de descuento
 
 En stock
 
@@ -79,7 +79,7 @@ Código: LN-LED-458
 
 6.500 nits, IP65 y 960 x 960 mm. Precio por gabinete.
 
-$ 1.645.800
+Antes ~~$ 1.645.800~~ **$ 1.119.140** 32 % de descuento
 
 En stock
 

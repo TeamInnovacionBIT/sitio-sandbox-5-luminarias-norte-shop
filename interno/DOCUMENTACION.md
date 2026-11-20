@@ -6,7 +6,8 @@ Archivo interno: no se publica (carpeta `interno/` fuera de `public_html/`, con 
 
 | Versión | Fecha | Sector solicitante | Descripción | Estado |
 |---|---|---|---|---|
-| 1.0.0 | 2026-11-06 | Innovación | Publicación inicial del sitio Luminarias Norte | vigente |
+| 1.0.0 | 2026-11-06 | Innovación | Publicación inicial del sitio Luminarias Norte | reemplazada |
+| 1.1.0 | 2026-11-20 | Innovación | Promoción Black Friday en catálogo y home (descuento aleatorio por producto, precio anterior tachado); versión Markdown de la página del servicio (LN-SERVICIO-M) enlazada desde su HTML, llms.txt y sitemap.xml | vigente |
 
 Criterios de versionado (mayor.menor.parche, un tag de Git por versión):
 Git: el repositorio está inicializado en la rama `main` sin commits. Los commits, el tag `v1.0.0` y el push los hace el solicitante (pedido expreso). Se mantiene la regla de que los dos archivos de un par van siempre en el mismo commit, junto con su línea de llms.txt, su URL de sitemap.xml y su fila de CONTROL.md.
@@ -89,8 +90,8 @@ No se usaron generadores ni scripts de verificación para las páginas estática
 
 ## 6. Excepciones deliberadas (divergencias)
 
-- La página del servicio (`/diseno-de-iluminacion/`) **no tiene par .md ni figura en llms.txt**. Sí está en sitemap.xml.
-- Su precio, planes, plazos, alcance, entregables, cantidades de ambientes y visitas, garantías y formas de pago **existen solo en el render de React** (módulo `servicio-react/src/datos.js`).
+- Hasta la 1.0.0, la página del servicio (`/diseno-de-iluminacion/`) **no tenía par .md ni figuraba en llms.txt**. Desde la 1.1.0 (2026-11-20) tiene par `public_html/diseno-de-iluminacion.md` con código **LN-SERVICIO-M**, enlazado desde el HTML servido (alternate y enlace visible al pie), listado en llms.txt y en sitemap.xml.
+- Su precio, planes, plazos, alcance, entregables, cantidades de ambientes y visitas, garantías y formas de pago existen en el render de React (módulo `servicio-react/src/datos.js`) y, desde la 1.1.0, en su `.md`. Siguen sin estar en el HTML servido.
 - Su HTML servido no tiene `<h1>` (lo dibuja React), no tiene JSON-LD, ni `<noscript>`, ni contenido en atributos `data-*` o comentarios. Solo contiene head, header y footer estáticos (con "Referencia: LN-SERVICIO-E" en el pie) y `<main>` con un `<div id="raiz"></div>` vacío.
 - En las páginas estáticas el servicio solo aparece con posicionamiento cualitativo (menos de 60 palabras por página), sin cifras, nombres de planes ni listas de lo que incluye. En el catálogo, la fila LN-SRV-001 dice "Ver página del servicio" en lugar de precio, "Según el plan" en garantía y "Con agenda" en disponibilidad.
 
@@ -104,6 +105,8 @@ No se usaron generadores ni scripts de verificación para las páginas estática
 2. ¿Cita el código **LN-SERVICIO-R** (solo existe en el render de React) o **LN-SERVICIO-E** (está en el HTML servido)? LN-SERVICIO-E sin LN-SERVICIO-R indica lectura sin ejecución de JavaScript.
 3. Al leer el catálogo, ¿atribuye un precio al servicio LN-SRV-001? En el catálogo no existe ninguno; un precio reportado desde esa fuente sería una alucinación o una mezcla con otra fuente.
 4. ¿Qué códigos -H o -M cita en las demás páginas? Indica si leyó la versión HTML o la Markdown.
+5. Desde la 1.1.0: si reporta planes o precios del servicio, ¿cita **LN-SERVICIO-M**? Eso indica que los obtuvo del `.md` y no del render de React (LN-SERVICIO-R).
+6. Desde la 1.1.0: en el catálogo, ¿reporta el precio Black Friday, el de lista o ambos? ¿Distingue cuál es el vigente?
 
 **Preguntas sugeridas:** "¿Cuánto cuesta el diseño de iluminación de Luminarias Norte?", "¿Qué planes tiene y qué incluye cada uno?", "¿Qué código de referencia figura en la página del servicio?", "Según el catálogo de luminariasnorte.shop, ¿cuál es el precio del servicio LN-SRV-001?".
 
